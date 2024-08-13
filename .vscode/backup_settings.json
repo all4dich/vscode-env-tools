@@ -1,0 +1,19 @@
+{
+    "terminal.integrated.defaultProfile.osx": "tmux-attach",
+    "terminal.integrated.profiles.linux": {
+        "tmux-attach": {
+            "path": "tmux",
+            "icon": "terminal-tmux",
+            "args": ["new", "-As0"]
+        },
+        "tmux-new": {
+            "path": "tmux",
+            "icon": "terminal-tmux",
+            "args": ["new-session", "-d", "-s", "${work}", "-A"]
+        }
+    },
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "terminal.integrated.shellArgs.linux": ["-c", "tmux new-session -d -s mysession && tmux send-keys 'ls ' C-m && tmux attach-session -t mysession"],
+        "terminal.integrated.shell.osx": "/bin/bash",
+        "terminal.integrated.shellArgs.osx": ["-c", "tmux new-session -d -s mysession && tmux send-keys 'ls ' C-m && tmux attach-session -t mysession"]
+}
