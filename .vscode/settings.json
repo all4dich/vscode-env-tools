@@ -1,0 +1,15 @@
+{
+    "terminal.integrated.defaultProfile.osx": "tmux-attach",
+    "terminal.integrated.profiles.linux": {
+        "tmux-attach": {
+            "path": "tmux",
+            "icon": "terminal-tmux",
+            "args": ["new", "-As0"]
+        },
+        "tmux-attach-to-workspace": {
+            "path": "tmux",
+            "icon": "terminal-tmux",
+            "args": ["new-session", "-d", "-s", "${workspaceFolderBasename}", "-A"]
+        }
+    }
+}
